@@ -10,7 +10,7 @@ jobs:
           docker run --rm \
             -v "$PWD":/home/user/app \
             -w /home/user/app \
-            kivy/buildozer:stable \
+            kivy/buildozer:latest \
             buildozer -v android debug
       - uses: actions/upload-artifact@v4
         with:
