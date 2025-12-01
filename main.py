@@ -28,7 +28,13 @@ class WebViewApp(App):
         activity = PythonActivity.mActivity
 
         webview = WebView(activity)
-        webview.getSettings().setJavaScriptEnabled(True)
+
+        settings = webview.getSettings()
+        settings.setJavaScriptEnabled(True)
+        settings.setDomStorageEnabled(True)
+        WebSettings = autoclass("android.webkit.WebSettings")
+        settings.setMixedContentMode(WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE)
+
         webview.setWebViewClient(WebViewClient())
         webview.loadUrl(TARGET_URL)
 

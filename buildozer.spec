@@ -1,7 +1,7 @@
 [app]
 # Basic app metadata
-title = WebViewApp
-package.name = webviewapp
+title = ShadeX-Ai
+package.name = ShadeX-Ai
 package.domain = org.example
 
 # Where your source lives
@@ -16,11 +16,10 @@ requirements = python3,kivy,android
 # Android settings
 orientation = portrait
 fullscreen = 1
-android.permissions = INTERNET
+android.permissions = INTERNET,ACCESS_NETWORK_STATE
 android.api = 33
 android.minapi = 21
 android.arch = arm64-v8a, armeabi-v7a
 android.enable_androidx = True
 
-# Uncomment this if you want a custom icon later
-# icon.filename = %(source.dir)s/data/icon.png
+icon.filename = %(source.dir)s/data/icon.png
