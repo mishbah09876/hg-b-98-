@@ -10,9 +10,11 @@ jobs:
           docker run --rm \
             -v "$PWD":/home/user/app \
             -w /home/user/app \
+            --entrypoint /bin/bash \
             kivy/buildozer:latest \
-            sh -c 'BUILDOZER_ALLOW_ROOT=1 buildozer -v android debug'
+            -c 'export BUILDOZER_ALLOW_ROOT=1; buildozer -v android debug'
       - uses: actions/upload-artifact@v4
         with:
           name: apk
           path: bin/*.apk
+
