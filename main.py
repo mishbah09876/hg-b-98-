@@ -14,7 +14,7 @@ LinearLayout = autoclass("android.widget.LinearLayout")
 LayoutParams = autoclass("android.view.ViewGroup$LayoutParams")
 
 # Change this to the site you want to display
-TARGET_URL = "https://mishbahop.github.io/site-h-vro/"
+TARGET_URL = "https://mishbahop.github.io/tournamnt/login.html"
 
 
 class WebViewApp(App):
@@ -55,3 +55,4 @@ class WebViewApp(App):
 
 if __name__ == "__main__":
     WebViewApp().run()
+
